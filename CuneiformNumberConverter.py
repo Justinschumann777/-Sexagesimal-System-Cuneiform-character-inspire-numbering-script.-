@@ -129,7 +129,7 @@ def convertNumbersToCuneiform(number: int) -> str:
     while number > 0: 
         remainder = number % 60
         
-        # Checking your custom monumental scale rules:
+        # custom monumental scale rules
         if position == 6 and remainder == 1:
             cunie_digits.append("𒈤") # MAH for 60^6
         elif position == 36 and remainder == 1:
@@ -142,7 +142,7 @@ def convertNumbersToCuneiform(number: int) -> str:
         number //= 60 
         position += 1  # Increment the column counter
 
-    # CRITICAL: Reversing and joining must happen OUTSIDE the while loop
+    
     cunie_digits.reverse()
     result = "".join(cunie_digits)
 
