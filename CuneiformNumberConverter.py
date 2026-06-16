@@ -122,7 +122,7 @@ def convertNumbersToCuneiform(number: int) -> str:
     
         
     cunie_digits = []
-    position = 0  # CRITICAL: We must initialize position at 0 before the loop!
+    position = 0  
 
     
     # Mathematical Base-60 division loop
