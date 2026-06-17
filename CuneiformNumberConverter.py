@@ -1,3 +1,4 @@
+
 def convertNumbersToCuneiform(number: int) -> str:
     cunie_map = [ "𒉡", #0
                  "𒀀", #1
@@ -122,27 +123,31 @@ def convertNumbersToCuneiform(number: int) -> str:
     
         
     cunie_digits = []
-    position = 0  
+    position = 0  # CRITICAL: We must initialize position at 0 before the loop!
 
     
     # Mathematical Base-60 division loop
     while number > 0: 
         remainder = number % 60
         
-        # custom monumental scale rules
+        # Checking your custom monumental scale rules:
         if position == 6 and remainder == 1:
             cunie_digits.append("𒈤") # MAH for 60^6
         elif position == 36 and remainder == 1:
             cunie_digits.append("𒂗") # EN for 60^36
         elif position == 216 and remainder == 1:
-            cunie_digits.append("𒀭") # AN for 60^216
+            cunie_digits.append("𒈹") # MUS for 60^216 
+        elif position == 1296 and remainder == 1:
+            cunie_digits.append("𒀭") # AN for 60^1296 
+        elif position == 7776 and remainder == 1:
+            cunie_digits.append("𒀮") # AN.AN for 60^7776 
         else: 
             cunie_digits.append(cunie_map[remainder])
             
         number //= 60 
         position += 1  # Increment the column counter
 
-    
+    # CRITICAL: Reversing and joining must happen OUTSIDE the while loop
     cunie_digits.reverse()
     result = "".join(cunie_digits)
 
