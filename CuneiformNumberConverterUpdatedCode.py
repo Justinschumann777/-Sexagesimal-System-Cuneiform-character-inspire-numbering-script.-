@@ -1,3 +1,4 @@
+# 𒉡 is selected for being the character for the Sumerian word for "no",𒃲 "Gal" is slected as the highest single degit number for meaning "large/big".slection of the other characters are mainly based on how "rememberable" they are shape. 
 def convertNumbersToCuneiform(number: int) -> str:
     cunie_map = [ "𒉡", #0
                  "𒀀", #1
