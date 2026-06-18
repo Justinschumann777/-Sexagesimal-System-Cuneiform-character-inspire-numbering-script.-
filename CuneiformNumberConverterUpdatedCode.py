@@ -152,8 +152,7 @@ def convertNumbersToCuneiform(number: int) -> str:
         
     cunie_digits = []
     for pos, char in raw_digits:
-        if char == "𒉡" and pos < highest_monumental_pos:
-            continue  # Suppress padding zeros below the monumental column
+        
         cunie_digits.append(char)
 
     
