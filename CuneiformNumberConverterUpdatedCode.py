@@ -1,4 +1,3 @@
-# 𒉡 is selected for being the character for the Sumerian word for "no",𒃲 "Gal" is slected as the highest single degit number for meaning "large/big".slection of the other characters are mainly based on how "rememberable" they are shape. 
 def convertNumbersToCuneiform(number: int) -> str:
     cunie_map = [ "𒉡", #0
                  "𒀀", #1
@@ -122,7 +121,7 @@ def convertNumbersToCuneiform(number: int) -> str:
     number = abs(number)
     raw_digits = []
     position = 0  
-    
+    highest_monumental_pos = -1
         
   
 
@@ -157,7 +156,7 @@ def convertNumbersToCuneiform(number: int) -> str:
 
     
 
-    
+    # CRITICAL: Reversing and joining must happen OUTSIDE the while loop
     cunie_digits.reverse()
     result = " : ".join(cunie_digits)
 
@@ -172,7 +171,8 @@ def convertNumbersToCuneiform(number: int) -> str:
 if __name__ == "__main__":
     # Test basic cases along with a massive test case for 60^6
     # 46656000000 is exactly 60^6
-    test_cases = [0, 60, 3600, 216000, 12960000, 777600000, 46656000000, 10314424798490535546171949056000000000000000000000000000000000000] 
+    test_cases = [0, 60, 3600, 219000, 12960000, 777600000, 46656000000, 10314424798490535546171949056000000000000000000000000000000000000] 
+
 
     print("--- Decimal to Base-60 cunie Conversion ---")
     for num in test_cases:
