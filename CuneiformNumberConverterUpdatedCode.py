@@ -172,7 +172,7 @@ def convertNumbersToCuneiform(number: int) -> str:
 if __name__ == "__main__":
     # Test basic cases along with a massive test case for 60^6
     # 46656000000 is exactly 60^6
-    test_cases = [0, 60, 3600, 219000, 12960000, 777600000, 46650000000, 10314424798490535546171949056000000000000000000000000000000000000] 
+    test_cases = [0, 60, 3600, 219000, 12960000, 777600000, 46656000000, 10314424798490535546171949056000000000000000000000000000000000000] 
 
     print("--- Decimal to Base-60 cunie Conversion ---")
     for num in test_cases:
