@@ -149,7 +149,7 @@ def convertNumbersToCuneiform(number: int) -> str:
 
     # CRITICAL: Reversing and joining must happen OUTSIDE the while loop
     cunie_digits.reverse()
-    result = "".join(cunie_digits)
+    result = " : ".join(cunie_digits)
 
     if is_negative:
         return "𒇲" + result  # for negative numbers 
