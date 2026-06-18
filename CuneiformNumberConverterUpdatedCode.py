@@ -122,7 +122,7 @@ def convertNumbersToCuneiform(number: int) -> str:
     number = abs(number)
     raw_digits = []
     position = 0  
-    highest_monumental_pos = -1
+    
         
   
 
