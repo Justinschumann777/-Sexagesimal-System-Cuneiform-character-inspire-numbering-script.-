@@ -80,7 +80,7 @@ def convertNumbersToCuneiform(number: int) -> str:
 
             "𒎎", #44
 
-              "𒎍", #45
+              "𒀾", #45
 
             "𒎌", #46
 
