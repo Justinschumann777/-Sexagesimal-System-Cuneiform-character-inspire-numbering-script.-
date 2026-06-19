@@ -135,7 +135,8 @@ def convertNumbersToCuneiform(number: int, separator: str= " : ") -> str:
         36: "𒂗",   # EN for 60^36
         216: "𒈹", # MUS for 60^216
         1296: "𒀭",  # AN for 60^1296
-        7776: "𒀮"  # AN.AN for 60^7776
+        7776: "𒀮",  # AN.AN for 60^7776
+        46656: "𒀯", # MUL for 60^46656 
     }
 
     
